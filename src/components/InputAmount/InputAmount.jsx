@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import ConvertedAmount from '../ConvertedAmount/ConvertedAmount';
+//import ConvertedAmount from '../ConvertedAmount/ConvertedAmount';
 import apiService from '../../utils/apiService';
-//import { Input, Dropdown } from 'semantic-ui-react';
+import { Input } from 'semantic-ui-react';
 
 export default function InputAmount(){
 
   const [btcData, setBTCData] = useState();
   const [btcPrice, setBtcPrice] = useState(null);
+  const [inputAmount, setInputAmount] = useState(null);
 
   async function getBTCRate(){
     try {
@@ -23,8 +24,15 @@ export default function InputAmount(){
   }, [])
   return(
     <>
-      <h1>Input Amount component {btcPrice}</h1>
-      <ConvertedAmount />
+      <h1>Input Amount component</h1>
+      {/* 
+      
+        either set default value as 1 or 
+        render the value when input amount is entered and convert value whenever inputAmount state changes
+      
+      */}
+      <Input focus placeholder='Input amount of coins...'/>
+      <h1>{inputAmount ? btcPrice : "input amount of coins bruh"}</h1>
     </>
   )
 }
