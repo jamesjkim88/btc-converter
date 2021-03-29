@@ -24,6 +24,10 @@ export default function InputAmount(){
     setInputAmount(evt.target.value);
   }
 
+  const convertedAmount = () => {
+    return "$"+inputAmount * btcPrice;
+  }
+
   useEffect(() => {
     getBTCRate();
   }, [])
@@ -32,12 +36,12 @@ export default function InputAmount(){
       <h1>Input Amount component</h1>
       {/* 
       
-        either set default value as 1 or 
-        render the value when input amount is entered and convert value whenever inputAmount state changes
+        need to have btcPrice converted into amount of inputAmount so
+        inputAmount * btcPrice = convertedAmount
       
       */}
       <Input focus placeholder='Input amount of coins...' onChange={handleChange}/>
-      <h1>{ inputAmount ? btcPrice : "input amount of coins bruh" }</h1>
+      <h1>{ inputAmount ? convertedAmount() : "input amount of coins bruh" }</h1>
     </>
   )
 }
