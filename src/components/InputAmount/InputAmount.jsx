@@ -19,6 +19,11 @@ export default function InputAmount(){
     }
   }
 
+  function handleChange(evt){
+    console.log(`value: ${evt.target.value}`)
+    setInputAmount(evt.target.value);
+  }
+
   useEffect(() => {
     getBTCRate();
   }, [])
@@ -31,8 +36,8 @@ export default function InputAmount(){
         render the value when input amount is entered and convert value whenever inputAmount state changes
       
       */}
-      <Input focus placeholder='Input amount of coins...'/>
-      <h1>{inputAmount ? btcPrice : "input amount of coins bruh"}</h1>
+      <Input focus placeholder='Input amount of coins...' onChange={handleChange}/>
+      <h1>{ inputAmount ? btcPrice : "input amount of coins bruh" }</h1>
     </>
   )
 }
