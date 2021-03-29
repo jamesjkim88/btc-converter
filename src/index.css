@@ -31,8 +31,13 @@ h1 {
   padding-top: 15%;
 }
 
+.icon {
+  display: inline-block;
+  padding: 0 15px;
+}
+
 .ui.focus.input{
-  width: 10em !important;
+  width: 7.8em !important;
 }
 
 .ui.input>input{

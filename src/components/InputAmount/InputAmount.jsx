@@ -37,8 +37,8 @@ export default function InputAmount(){
   }, [])
   return(
     <>
-      <h1>BTC <i class="fas fa-long-arrow-alt-right"></i> USD</h1>
-      <Input focus placeholder='Number of BTC...' onChange={handleChange}/>
+      <h1>BTC <span className="icon"><i class="fas fa-long-arrow-alt-right"></i></span> USD</h1>
+      <Input focus placeholder='# of BTC...' onChange={handleChange}/>
       <h1>{ inputAmount ? convertedAmount() : null }</h1>
     </>
   )
