@@ -9,7 +9,7 @@ import LoginPage from '../LoginPage/LoginPage';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container">
       <InputAmount />
     </div>
   );
