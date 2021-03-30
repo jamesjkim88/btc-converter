@@ -29,17 +29,23 @@ export default function InputAmount(){
   // }
 
   function convertedAmount() {
-    return `$${inputAmount * btcPrice}`
+    // return `$${inputAmount * btcPrice}`
+    const formatter = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD'
+    })
+    const data = `${inputAmount * btcPrice}`
+    return formatter.format(data)
   }
 
   useEffect(() => {
     getBTCRate();
   }, [])
   return(
-    <>
-      <h1>BTC <span className="icon"><i class="fas fa-long-arrow-alt-right"></i></span> USD</h1>
+    <div className="container">
+      <h1 className="title">BTC <span className="icon"><i class="fas fa-long-arrow-alt-right"></i></span> USD</h1>
       <Input focus placeholder='# of BTC...' onChange={handleChange}/>
-      <h1>{ inputAmount ? convertedAmount() : null }</h1>
-    </>
+      <h1 className="title">{ inputAmount ? convertedAmount() : null }</h1>
+    </div>
   )
 }
