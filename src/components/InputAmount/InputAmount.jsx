@@ -42,10 +42,12 @@ export default function InputAmount(){
     getBTCRate();
   }, [])
   return(
-    <div className="container">
-      <h1 className="title">BTC <span className="icon"><i class="fas fa-long-arrow-alt-right"></i></span> USD</h1>
-      <Input focus placeholder='# of BTC...' onChange={handleChange}/>
-      <h1 className="title">{ inputAmount ? convertedAmount() : null }</h1>
+    <div className="conversion">
+      <div className="row">
+        <h1 className="title">BTC <span className="icon"><i class="fas fa-long-arrow-alt-right"></i></span> USD</h1>
+        <Input focus placeholder='# of BTC...' onChange={handleChange}/>
+        <h1 className="title converted-amount">{ inputAmount ? convertedAmount() : "" }</h1>
+      </div>
     </div>
   )
 }
