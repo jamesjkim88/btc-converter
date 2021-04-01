@@ -65,7 +65,7 @@ h1.title {
   text-align: left;
   font-size: 64px;
   line-height: 64px;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 
 .info-list-item{
@@ -154,4 +154,8 @@ li.nav-top-pad {
   position: relative;
   top: 5%;
   letter-spacing: 1px;
+}
+
+.disclaimer, .data{
+  margin-bottom: 10px;
 }
