@@ -33,6 +33,10 @@ h1.title {
   line-height: 1.5em !important;
 }
 
+.nav-title h1{
+  font-size: 58px !important;
+}
+
 .logo-span img{
   vertical-align: top;
 }
@@ -74,7 +78,7 @@ h1.title {
 
 .info-subhead{
   font-size: 18px !important;
-  margin-bottom: 10px !important;
+  margin-bottom: 0 !important;
   line-height: 30px !important;
 }
 
