@@ -3,7 +3,7 @@ import { Button, Icon } from 'semantic-ui-react';
 
 export default function ConvertedAmount(){
   return(
-    <div className="info container">
+    <div className="info container" id="info">
       <h1 className="info-title"><span className="red-border">Simply BTC-to-USD</span></h1>
       <section className="about">
         <h2 className="info-copy info-header"><span className="red-border">About</span></h2>
@@ -32,7 +32,7 @@ export default function ConvertedAmount(){
         <p className="info-copy">Price data is supported by Nomadic Cyrpto Currenty API for Bitcoin.</p>
       </section>
       <br/>
-      <Button content="Top" color="facebook"/>
+      <Button href="#top" content="Top" color="facebook"/>
     </div>
   )
 }
