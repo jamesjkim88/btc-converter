@@ -59,9 +59,13 @@ export default function InputAmount(){
   return(
     <div className="conversion" id="conversion">
       <div className="row">
+        <div>
         <Dropdown defaultValue="BTC" search selection options={cyrptoOptions} /> <span className="icon"><i className="fas fa-long-arrow-alt-right"></i></span> <Dropdown defaultValue="USD" search selection options={currencyOptions} />
-        <h1 className="title">BTC <span className="icon"><i className="fas fa-long-arrow-alt-right"></i></span> USD</h1>
+        </div>
+        {/* <h1 className="title">BTC <span className="icon"><i className="fas fa-long-arrow-alt-right"></i></span> USD</h1> */}
+        <div>
         <Input focus placeholder='# of BTC...' onChange={handleChange}/>
+        </div>
         <h1 className="title converted-amount">{ inputAmount ? convertedAmount() : "" }</h1>
       </div>
    
