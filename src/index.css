@@ -159,3 +159,19 @@ li.nav-top-pad {
 .disclaimer, .data{
   margin-bottom: 10px;
 }
+
+.ui.selection.dropdown{
+  min-width: 3em !important;
+  padding: 10px 44px 10px 8px !important;
+  min-height: 0 !important;
+}
+
+.ui.search{
+  font-size: 3em !important;
+}
+
+.ui.selection.dropdown>.delete.icon, .ui.selection.dropdown>.dropdown.icon, .ui.selection.dropdown>.search.icon {
+  top: 1em !important;
+  right: 1em !important;
+  padding: 0 !important;
+}
