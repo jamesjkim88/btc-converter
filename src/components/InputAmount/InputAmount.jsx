@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 //import ConvertedAmount from '../ConvertedAmount/ConvertedAmount';
 import apiService from '../../utils/apiService';
-import { Input, Dropdown } from 'semantic-ui-react';
+import { Input, Dropdown, Grid } from 'semantic-ui-react';
 
 export default function InputAmount(){
 
@@ -65,6 +65,7 @@ export default function InputAmount(){
   useEffect(() => {
     getBTCRate(cryptoCurrency, cashCurrency);
   }, [inputAmount, cashCurrency, cryptoCurrency])
+  
   return(
     <div className="conversion" id="conversion">
       <div className="row">

@@ -9,77 +9,8 @@ body, html{
 }
 
 body {
-  /* margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
   background: #F8F8F8 !important;
   color: #3c3c3c
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.ui.button{
-  line-height: 1.5em !important;
-}
-
-h1.title {
-  font-size: 4em !important;
-  line-height: 1.5em !important;
-}
-
-.nav-title h1{
-  font-size: 58px !important;
-}
-
-.logo-span img{
-  vertical-align: top;
-}
-
-.conversion{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.info{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 100vh;
-}
-
-.info-header{
-  font-size: 28px !important;
-  padding-left: 0 !important;
-}
-
-.info-title{
-  text-align: left;
-  font-size: 64px;
-  line-height: 64px;
-  margin-bottom: 35px;
-}
-
-.info-list-item{
-  padding-left: 0 !important;
-}
-
-.info-list{
-  padding-left: 100px;
-}
-
-.info-subhead{
-  font-size: 18px !important;
-  margin-bottom: 0 !important;
-  line-height: 30px !important;
 }
 
 span.red-border{
@@ -87,17 +18,11 @@ span.red-border{
   border-bottom: 3px red solid;
 }
 
-.info-copy{
-  font-size: 16px;
-  text-align: left;
-  padding-left: 50px;
-}
+/***** 
+NAVBAR
+ ****/
 
-li.info-copy{
-  line-height: 26px;
-}
-
-nav{
+ nav{
   width: 100%;
   padding: 15px 10px;
   box-shadow: 0px 1px 8px #ccc;
@@ -132,6 +57,98 @@ li.nav-top-pad {
   font-size: 3em;
 }
 
+ .nav-title h1{
+  font-size: 58px !important;
+}
+
+.logo-span img{
+  vertical-align: top;
+}
+
+/*******************
+CONVERSION COMPONENT
+*******************/
+
+.conversion{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1.title {
+  font-size: 4em !important;
+  line-height: 1.5em !important;
+}
+
+.ui.selection.dropdown{
+  min-width: 3em !important;
+  padding: 10px 44px 10px 8px !important;
+  min-height: 0 !important;
+}
+
+.ui.search{
+  font-size: 3.5em !important;
+}
+
+.ui.selection.dropdown>.delete.icon, .ui.selection.dropdown>.dropdown.icon, .ui.selection.dropdown>.search.icon {
+  top: 1em !important;
+  right: 1em !important;
+  padding: 0 !important;
+}
+
+/************* 
+INFO COMPONENT
+*************/
+
+.info{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.ui.button{
+  line-height: 1.5em !important;
+}
+
+.info-header{
+  font-size: 28px !important;
+  padding-left: 0 !important;
+}
+
+.info-title{
+  text-align: left;
+  font-size: 64px;
+  line-height: 64px;
+  margin-bottom: 35px;
+}
+
+.info-list-item{
+  padding-left: 0 !important;
+}
+
+.info-list{
+  padding-left: 100px;
+}
+
+.info-subhead{
+  font-size: 18px !important;
+  margin-bottom: 0 !important;
+  line-height: 30px !important;
+}
+
+.info-copy{
+  font-size: 16px;
+  text-align: left;
+  padding-left: 50px;
+}
+
+li.info-copy{
+  line-height: 26px;
+}
+
 .ui.focus.input{
   width: 9em !important;
 }
@@ -163,18 +180,41 @@ li.nav-top-pad {
   margin-bottom: 10px;
 }
 
-.ui.selection.dropdown{
-  min-width: 3em !important;
-  padding: 10px 44px 10px 8px !important;
-  min-height: 0 !important;
-}
+/************
+MEDIA QUERIES
+************/
 
-.ui.search{
-  font-size: 3.5em !important;
-}
+@media only screen and (device-width: 412px) and (orientation: portrait), only screen and (min-device-width: 374px) and (max-device-width: 376px), only screen and (min-device-width: 413px) and (max-device-width: 415px), only screen and (min-device-width: 319px) and (max-device-width: 321px), only screen and (device-width: 375px) and (orientation: portrait), only screen and (device-width: 393px) and (orientation: portrait), only screen and (device-width: 360px) and (orientation: portrait){
+  .nav-title h1{
+    font-size: 32px !important;
+  }
+  .btc-logo, .help-icon{
+    display: none !important;
+  }
 
-.ui.selection.dropdown>.delete.icon, .ui.selection.dropdown>.dropdown.icon, .ui.selection.dropdown>.search.icon {
-  top: 1em !important;
-  right: 1em !important;
-  padding: 0 !important;
+  nav ul{
+    justify-content: center;
+  }
+
+  .ui.search{
+    font-size: 3em !important;
+  }
+
+  .ui.focus.input {
+    width: 8em !important;
+  }
+
+  .info{
+    height: 100% !important;
+    margin-bottom: 25px !important;
+  }
+
+  .info-title{
+    font-size: 50px;
+    line-height: 62px;
+  }
+
+  .ui.button{
+    width: 30% !important;
+  }
 }
