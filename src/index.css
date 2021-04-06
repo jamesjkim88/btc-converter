@@ -184,7 +184,14 @@ li.info-copy{
 MEDIA QUERIES
 ************/
 
-@media only screen and (device-width: 412px) and (orientation: portrait), only screen and (min-device-width: 374px) and (max-device-width: 376px), only screen and (min-device-width: 413px) and (max-device-width: 415px), only screen and (min-device-width: 319px) and (max-device-width: 321px), only screen and (device-width: 375px) and (orientation: portrait), only screen and (device-width: 393px) and (orientation: portrait), only screen and (device-width: 360px) and (orientation: portrait){
+@media only screen and (max-device-width: 480px) and (orientation: portrait),
+       only screen and (device-width: 412px) and (orientation: portrait),
+       only screen and (min-device-width: 374px) and (max-device-width: 376px),
+       only screen and (min-device-width: 413px) and (max-device-width: 415px),
+       only screen and (min-device-width: 319px) and (max-device-width: 321px),
+       only screen and (device-width: 375px) and (orientation: portrait),
+       only screen and (device-width: 393px) and (orientation: portrait),
+       only screen and (device-width: 360px) and (orientation: portrait){
   .nav-title h1{
     font-size: 32px !important;
   }
@@ -210,8 +217,12 @@ MEDIA QUERIES
   }
 
   .info-title{
-    font-size: 50px;
-    line-height: 62px;
+    font-size: 38px;
+    line-height: 50px;
+  }
+
+  .info-header{
+    font-size: 24px !important;
   }
 
   .ui.button{
