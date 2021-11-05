@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-//import ConvertedAmount from '../ConvertedAmount/ConvertedAmount';
 import apiService from '../../utils/apiService';
-import { Input, Dropdown, Grid } from 'semantic-ui-react';
+import { Input, Dropdown } from 'semantic-ui-react';
 
 export default function InputAmount(){
 
-  const [btcData, setBTCData] = useState();
-  const [btcPrice, setBtcPrice] = useState(null);
+  const [btcPrice, setBtcPrice] = useState('');
   const [inputAmount, setInputAmount] = useState(null);
   const [cashCurrency, setCashCurrency] = useState('USD');
   const [cryptoCurrency, setCryptoCurrency] = useState('BTC');
@@ -71,6 +69,8 @@ export default function InputAmount(){
       <div className="row">
         <Dropdown defaultValue={cryptoCurrency} search selection options={cyrptoOptions} onChange={handleCryptoChange} /> <span className="icon"><i className="fas fa-long-arrow-alt-right"></i></span> <Dropdown defaultValue={cashCurrency} search selection options={currencyOptions} onChange={handleCurrencyChange} />
         <Input focus placeholder={`# of ${cryptoCurrency}...`} onChange={handleChange}/>
+        {/* TODO */}
+        {/* Instead of invoking the function inside the return state (convertedAmount()), try rendering the state and have the function set the CryptoPriceState */}
         <h1 className="title converted-amount">{ inputAmount ? convertedAmount() : "" }</h1>
       </div>
     </div>

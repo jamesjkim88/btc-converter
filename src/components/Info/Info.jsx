@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Button, Icon } from 'semantic-ui-react';
+import React from 'react';
+import { Button } from 'semantic-ui-react';
 
 export default function ConvertedAmount(){
   return(
