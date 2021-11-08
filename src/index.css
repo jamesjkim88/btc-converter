@@ -163,6 +163,10 @@ li.info-copy{
   top: 0.25em;
 }
 
+.search{
+  padding: 5px 8px !important;
+}
+
 .converted-amount{
   height: 72px;
 }
